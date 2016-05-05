@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<ListContainerElement height="35" bkcolor="#FFD7AD69" bordercolor="#FFFFFFFF" bordersize="1">
+		<HorizontalLayout>
+			<Control width="10"/>
+			<Label name="dns_vip_label" textcolor="#FF3E3E42"/>
+			<Control />
+			<Label name="dns_uptime_label" width="100" align="center" textcolor="#FF3E3E42"/>
+			<Label name="dns_ping_t_ms_label" width="100" align="center" textcolor="#FF3E3E42"/>
+		</HorizontalLayout>
+	</ListContainerElement>
+</Window>

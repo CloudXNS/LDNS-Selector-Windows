@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<ListContainerElement height="35" bkcolor="#FFD7AD69" bordercolor="#FFFFFFFF" bordersize="1">
+		<HorizontalLayout>
+			<Control width="10"/>
+			<Label name="adapter_description_label" textcolor="#FF3E3E42"/>
+			<Control />
+			<Label name="adapter_dns_1_label" width="120" textcolor="#FF3E3E42" />
+			<Label name="adapter_dns_2_label" width="120" textcolor="#FF3E3E42" />
+		</HorizontalLayout>
+	</ListContainerElement>
+</Window>

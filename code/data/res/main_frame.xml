@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="600,500" maxinfo="600,800" mininfo="600,500" roundcorner="5,5" caption="0,0,0,262">
+	<Font shared="true" id="0" name="微软雅黑" size="11" bold="false" default="true"/>
+	<Font shared="true" id="1" name="微软雅黑" size="13" bold="true"/>
+	<Default shared="true" name="VScrollBar" value="button1normalimage=&quot;file='pic/scrollbar.bmp' source='0,90,16,106' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='pic/scrollbar.bmp' source='18,90,34,106' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='pic/scrollbar.bmp' source='36,90,52,106' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='pic/scrollbar.bmp' source='54,90,70,106' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='pic/scrollbar.bmp' source='0,108,16,124' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='pic/scrollbar.bmp' source='18,108,34,124' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='pic/scrollbar.bmp' source='36,108,52,124' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='pic/scrollbar.bmp' source='54,108,70,124' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='pic/scrollbar.bmp' source='0,126,16,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='pic/scrollbar.bmp' source='18,126,34,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='pic/scrollbar.bmp' source='36,126,52,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='pic/scrollbar.bmp' source='54,126,70,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='pic/scrollbar.bmp' source='0,144,16,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='pic/scrollbar.bmp' source='18,144,34,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='pic/scrollbar.bmp' source='36,144,52,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='pic/scrollbar.bmp' source='54,144,70,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='pic/scrollbar.bmp' source='0,162,16,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='pic/scrollbar.bmp' source='18,162,34,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='pic/scrollbar.bmp' source='36,162,52,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='pic/scrollbar.bmp' source='54,162,70,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+	<VerticalLayout bkcolor="#FFB9D5E8" bkcolor2="#FFFFFFFF" bordercolor="#FFFFFFFF" bordersize="1">
+	
+		<VerticalLayout bkimage="pic/main_frame.png" height="262">
+			<Control height="10" />
+			<HorizontalLayout height="10">
+				<Control />
+				<Button name="min_btn" width="10" height="10" normalimage="file='pic/min_btn.png'" hotimage="pic/min_hot_btn.png" pushedimage="pic/min_btn.png"/>
+				<Control width="10" />
+				<Button name="exit_btn" width="10" height="10" normalimage="file='pic/exit_btn.png'" hotimage="pic/exit_hot_btn.png" pushedimage="pic/exit_btn.png"/>
+				<Control width="10" />
+			</HorizontalLayout>
+			<Control height="50" />
+			<HorizontalLayout height="30">
+				<Control width="420"/>
+				<Label name="version_label" textcolor="#FFFFFFFF"/>
+				<Control />
+			</HorizontalLayout>
+			<Control height="50"/>
+			<HorizontalLayout height="61">
+				<Control />
+				<Button name="auto_done_btn" width="149" height="61" normalimage="file='pic/auto_done_btn.png'" hotimage="pic/auto_done_hot_btn.png" pushedimage="pic/auto_done_pushed_btn.png"/>
+				<Control />
+			</HorizontalLayout>
+			<Control height="20" />
+		</VerticalLayout>
+		
+		<HorizontalLayout height="218">
+			<Control width="10" />
+			<List name="log_list" header="false" vscrollbar="true" />
+		</HorizontalLayout>
+
+		<HorizontalLayout height="20" bkcolor="#FFF1F1F1">
+			<Control width="10" />
+			<Label text="Copyright © 2016 Beijing Fastweb Technology Inc.     http://www.cloudxns.net" textcolor="#FFB6B6B6"/>
+		</HorizontalLayout>
+		
+		<VerticalLayout name="professional_view" visible="false" height="200">
+			<List name="dns_info_list" vscrollbar="true"/>
+			<Control height="10"/>
+			<HorizontalLayout height="30">
+				<Control />
+				<Button name="freshen_dns_btn" text="刷新DNS" font="1" width="80" bkcolor="#FFFFC631" bordercolor="#FFFFFFFF" bordersize="1" textcolor="#FFFFFFFF" hottextcolor="#FFE69083" pushedtextcolor="#FFFF0000" disabledtextcolor="#FFC0C0C0"/>
+			</HorizontalLayout>
+			<Control height="10"/>
+			<List name="adapter_info_list" height="71" vscrollbar="true"/>
+			<Control height="10"/>
+			<HorizontalLayout height="30">
+				<Control />
+				<Button name="switch_adapter_dns_btn" text="切换网卡DNS" font="1" width="100" bkcolor="#FFFFC631" bordercolor="#FFFFFFFF" bordersize="1" textcolor="#FFFFFFFF" hottextcolor="#FFE69083" pushedtextcolor="#FFFF0000" disabledtextcolor="#FFC0C0C0"/>
+				<Button name="freshen_adapter_btn" text="刷新网卡" font="1" width="80" bkcolor="#FFFFC631" bordercolor="#FFFFFFFF" bordersize="1" textcolor="#FFFFFFFF" hottextcolor="#FFE69083" pushedtextcolor="#FFFF0000" disabledtextcolor="#FFC0C0C0"/>
+			</HorizontalLayout>
+		</VerticalLayout>
+    </VerticalLayout>
+</Window>
