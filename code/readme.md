@@ -1,6 +1,8 @@
 #Build Requirement
 * Visual Studio 2013
 
-#Build Step
-1. build ./third/cpprestsdk/cpprestsdk120.sln with Visual Stuido 2013
-2. build ./msvs/dns_selector.sln
+#Build
+* Just build the code/msvc/dns_selector.sln with Visual Studio 2013
+
+#Build Tips
+* Visual Stuio will download the NuGetPacket(boost libs) used by cpprestsdk for a very long time.you can have a rest in this time.
