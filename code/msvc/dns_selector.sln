@@ -5,6 +5,7 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dns_selector", "dns_selector.vcxproj", "{E2660F11-94D0-457D-98FE-C96ACA058845}"
 	ProjectSection(ProjectDependencies) = postProject
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1} = {15F3B200-1AED-4B57-AF37-B21CD67914B1}
 		{EF423990-EBF0-4625-840B-BBAE80377076} = {EF423990-EBF0-4625-840B-BBAE80377076}
 		{FF687DB1-F731-4E73-82BF-6B4BF23D52E6} = {FF687DB1-F731-4E73-82BF-6B4BF23D52E6}
 	EndProjectSection
@@ -13,7 +14,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DNSPing", "..\third\DNSPing
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DuiLib_Static", "..\third\duilib\src\DuiLib_Static.vcxproj", "{EF423990-EBF0-4625-840B-BBAE80377076}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cpprestsdk120.xp", "..\third\cpprestsdk\Release\src\build\vs12.xp\casablanca120.xp.vcxproj", "{15F3B200-1AED-4B57-AF37-B21CD67914B1}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\third\cpprestsdk\Release\src\build\win32.vcxitems*{15f3b200-1aed-4b57-af37-b21cd67914b1}*SharedItemsImports = 4
+		..\third\cpprestsdk\Release\src\build\common.vcxitems*{15f3b200-1aed-4b57-af37-b21cd67914b1}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
 		Debug|Win32 = Debug|Win32
@@ -81,6 +88,30 @@ Global
 		{EF423990-EBF0-4625-840B-BBAE80377076}.UnicodeRelease|Win32.ActiveCfg = UnicodeRelease|Win32
 		{EF423990-EBF0-4625-840B-BBAE80377076}.UnicodeRelease|Win32.Build.0 = UnicodeRelease|Win32
 		{EF423990-EBF0-4625-840B-BBAE80377076}.UnicodeRelease|x64.ActiveCfg = UnicodeRelease|Win32
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.Debug|ARM.ActiveCfg = Debug|ARM
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.Debug|ARM.Build.0 = Debug|ARM
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.Debug|Win32.Build.0 = Debug|Win32
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.Debug|x64.ActiveCfg = Debug|x64
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.Debug|x64.Build.0 = Debug|x64
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.Release|ARM.ActiveCfg = Release|ARM
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.Release|ARM.Build.0 = Release|ARM
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.Release|Win32.ActiveCfg = Release|Win32
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.Release|Win32.Build.0 = Release|Win32
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.Release|x64.ActiveCfg = Release|x64
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.Release|x64.Build.0 = Release|x64
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.UnicodeDebug|ARM.ActiveCfg = Debug|ARM
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.UnicodeDebug|ARM.Build.0 = Debug|ARM
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.UnicodeDebug|Win32.ActiveCfg = Debug|Win32
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.UnicodeDebug|Win32.Build.0 = Debug|Win32
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.UnicodeDebug|x64.ActiveCfg = Debug|x64
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.UnicodeDebug|x64.Build.0 = Debug|x64
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.UnicodeRelease|ARM.ActiveCfg = Release|ARM
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.UnicodeRelease|ARM.Build.0 = Release|ARM
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.UnicodeRelease|Win32.ActiveCfg = Release|Win32
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.UnicodeRelease|Win32.Build.0 = Release|Win32
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.UnicodeRelease|x64.ActiveCfg = Release|x64
+		{15F3B200-1AED-4B57-AF37-B21CD67914B1}.UnicodeRelease|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
