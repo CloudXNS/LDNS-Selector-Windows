@@ -6,7 +6,6 @@ CloudXNS为广大网民提供的DNS 一键优化工具 https://www.cloudxns.net/
 * Visual Studio 2013
 
 #Build
-* Just build the code/msvc/dns_selector.sln with Visual Studio 2013
+* 1.build code/third/cpprestsdk/cpprestsdk120.sln with Visual Studio 2013 for cpprestsdk.lib(It will takes a long time for download the NuGetPacket)
 
-#Build Tips
-* Visual Stuio will download the NuGetPacket(boost libs) used by cpprestsdk for a very long time.you can have a rest in this time.
+* 2.build code/msvc/dns_selector.sln with Visual Studio 2013
