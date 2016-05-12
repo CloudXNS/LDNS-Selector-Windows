@@ -72,6 +72,9 @@
     <PostBuildEvent>
       <Command>..\data\update_for_test.bat -silent</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>prepare.bat</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -95,6 +98,9 @@
       <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
       <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
     </Link>
+    <PreBuildEvent>
+      <Command>prepare.bat</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\performance_counter.cpp" />
