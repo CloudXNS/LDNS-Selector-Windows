@@ -67,9 +67,18 @@ void ui::InitWindow()
     Assert(m_p_freshen_dns_btn != nullptr);
     m_p_switch_adapter_dns_btn = static_cast<DuiLib::CButtonUI*>(m_PaintManager.FindControl(_T("switch_adapter_dns_btn")));
     Assert(m_p_switch_adapter_dns_btn != nullptr);
+    m_p_info_tablayout = static_cast<DuiLib::CTabLayoutUI*>(m_PaintManager.FindControl(_T("info_tablayout")));
+    Assert(m_p_info_tablayout != nullptr);
     m_p_log_list = static_cast<DuiLib::CListUI*>(m_PaintManager.FindControl(_T("log_list")));
     Assert(m_p_log_list != nullptr);
+    m_p_ad_brower = static_cast<DuiLib::CWebBrowserUI*>(m_PaintManager.FindControl(_T("ad_brower")));
+    Assert(m_p_ad_brower != nullptr);
     
+    m_p_info_tablayout->SelectItem(m_p_ad_brower);
+
+    m_p_ad_brower->SetDelayCreate(false);
+    m_p_ad_brower->Navigate2(L"about:blank");
+
     m_p_version_label->SetText(get_version().c_str());
     m_p_log_list->GetHeader()->SetFixedHeight(1);
     m_p_dns_info_list->GetHeader()->SetFixedHeight(1);
@@ -134,6 +143,7 @@ LRESULT ui::OnKeyDown(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
         bool pro_mode = m_p_professional_view->IsVisible();
         if (pro_mode)
         {
+            show_ad(false);
             ResizeClient(UI_MAIN_FRAME_WIDTH, UI_MAIN_FRAME_MIN_HEIGHT);
             m_p_professional_view->SetVisible(false);
         }
@@ -160,6 +170,7 @@ void ui::OnClick(TNotifyUI& msg)
     }
     else if (pSender == m_p_auto_done_btn)
     {
+        show_ad(false);
         OnAutoDone();
     }
     else if (pSender == m_p_freshen_adapter_btn)
@@ -528,6 +539,33 @@ void ui::showerror(const char* format, ...)
         m_p_log_list->Add(p_item);
         ui_fresh();
         m_p_log_list->EndDown();
+    }
+    );
+}
+
+void ui::show_ad(bool show)
+{
+    post_call(
+        [this, show]()
+    {
+        if (show)
+        {
+            m_p_info_tablayout->SelectItem(m_p_ad_brower);
+        }
+        else
+        {
+            m_p_info_tablayout->SelectItem(m_p_log_list);
+        }
+    }
+    );
+}
+
+void ui::navigate(const std::string& str_url)
+{
+    post_call(
+        [this, str_url]()
+    {
+        m_p_ad_brower->Navigate2(util_string_a2w(str_url).c_str());
     }
     );
 }

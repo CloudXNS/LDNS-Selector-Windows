@@ -1,6 +1,9 @@
 #pragma once
 
 #define NETWORK_INTERFACE                           "http://tools.cloudxns.net/Api/getLdns"
+#define AD_IMG_URL                                  "https://www.cloudxns.net/Public/Sun/images/common/AdBanner.png"
+#define AD_LINK_URL                                 "https://www.cloudxns.net/Index/index.html?channel_code=dnsselector"
+#define DEFAULT_AD_LINK_URL                         "https://www.cloudxns.net"
 
 #define DNS_PING_URL                                L"www.qq.com"
 
@@ -41,7 +44,9 @@ enum result
     result_getiftalbe_malloc_fail,
     result_getiftalbe_fail,
     result_no_valid_dns_for_switching,
-    result_no_valid_adapter_for_switching
+    result_no_valid_adapter_for_switching,
+    result_temp_ad_uri_invalid,
+    result_temp_ad_html_file_create_file
 };
 
 static const char* s_result_string[] = 
@@ -62,10 +67,15 @@ static const char* s_result_string[] =
     "获取网卡数据统计分配内存失败",
     "获取网卡数据统计失败",
     "没有可切换的DNS",
-    "没有可切换的网卡"
+    "没有可切换的网卡",
+    "页面资源不可用",
+    "临时HTML文件创建失败"
 };
 
 __inline const char* result_string(result res)
 {
     return s_result_string[res];
 }
+
+
+#define AD_HTML_FMT "<!DOCTYPE html><html lang=\"en\"><head>	<meta charset=\"UTF-8\">	<title>test</title>	<style type=\"text/css\">	*{margin: 0;padding: 0}	html,body{		height: 100%%;		width: 100%%;		overflow: hidden;	}	img{		height: 100%%;		width: 100%%;	}	</style></head><body>	<a href=\"%s\" target=\"_blank\">		<img src=\"%s\">	</a></body></html>"

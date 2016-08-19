@@ -103,6 +103,7 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\ad_performancer.cpp" />
     <ClCompile Include="..\src\performance_counter.cpp" />
     <ClCompile Include="..\src\dns_ping.cpp" />
     <ClCompile Include="..\src\dns_selector.cpp" />
@@ -113,6 +114,7 @@
     <ClCompile Include="..\src\wmi.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\ad_performancer.h" />
     <ClInclude Include="..\src\performance_counter.h" />
     <ClInclude Include="..\src\interface.h" />
     <ClInclude Include="..\src\define.h" />

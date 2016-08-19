@@ -29,11 +29,11 @@
 			<Control height="20" />
 		</VerticalLayout>
 		
-		<HorizontalLayout height="218">
-			<Control width="10" />
+		<TabLayout name="info_tablayout"height="218">
+			<WebBrowser name="ad_brower" />
 			<List name="log_list" header="false" vscrollbar="true" />
-		</HorizontalLayout>
-
+		</TabLayout>
+		
 		<HorizontalLayout height="20" bkcolor="#FFF1F1F1">
 			<Control width="10" />
 			<Label text="Copyright © 2016 Beijing Fastweb Technology Inc.     http://www.cloudxns.net" textcolor="#FFB6B6B6"/>

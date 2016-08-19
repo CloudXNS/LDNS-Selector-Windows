@@ -72,7 +72,11 @@ result ip_fetcher::fetch(std::unordered_map<std::wstring, std::unordered_map<std
                 res = result_network_interface_respond_parse_fail;
                 ui::instance()->showerror("解析DNS列表数据发生异常-->[%s]", e.what());
             }
-            
+        }
+        catch (web::json::json_exception const & e)
+        {
+            res = result_network_interface_respond_parse_fail;
+            ui::instance()->showerror("解析DNS列表数据发生异常-->[%s]", e.what());
         }
     })
         .wait();

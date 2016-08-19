@@ -34,6 +34,8 @@ public:
     void showlog(const char* log, ...);
     void showwarning(const char* warning, ...);
     void showerror(const char* error, ...);
+    void show_ad(bool show);
+    void navigate(const std::string& str_url);
 private:
     void post_call(std::function<void()> func);
     void send_call(std::function<void()> func);
@@ -57,6 +59,8 @@ private:
     DuiLib::CListUI* m_p_dns_info_list;
     DuiLib::CListUI* m_p_adapter_info_list;
     DuiLib::CListUI* m_p_log_list;
+    DuiLib::CWebBrowserUI* m_p_ad_brower;
+    DuiLib::CTabLayoutUI* m_p_info_tablayout;
 private:
     DWORD m_orgin_dns_item_color;
     DWORD m_orgin_adapter_item_color;
@@ -80,6 +84,8 @@ private:
         , m_p_dns_info_list(nullptr)
         , m_p_adapter_info_list(nullptr)
         , m_p_log_list(nullptr)
+        , m_p_ad_brower(nullptr)
+        , m_p_info_tablayout(nullptr)
         , m_orgin_dns_item_color(0xFFFFFFFF)
         , m_orgin_adapter_item_color(0xFFFFFFFF)
         , m_p_last_selected_adapter_item(nullptr)

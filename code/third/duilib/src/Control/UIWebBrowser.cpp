@@ -289,11 +289,27 @@ STDMETHODIMP CWebBrowserUI::ShowContextMenu( DWORD dwID, POINT* pptPosition, IUn
 
 STDMETHODIMP CWebBrowserUI::GetHostInfo( DOCHOSTUIINFO* pInfo )
 {
-	if (m_pWebBrowserEventHandler)
-	{
-		return m_pWebBrowserEventHandler->GetHostInfo(pInfo);
-	}
-	return E_NOTIMPL;
+    if (pInfo != NULL)
+    {
+        pInfo->cbSize = sizeof(DOCHOSTUIINFO);
+        pInfo->dwDoubleClick = DOCHOSTUIDBLCLK_DEFAULT;
+        pInfo->dwFlags |= DOCHOSTUIFLAG_NO3DBORDER | DOCHOSTUIFLAG_THEME |
+            DOCHOSTUIFLAG_NO3DOUTERBORDER | DOCHOSTUIFLAG_DIALOG |
+            DOCHOSTUIFLAG_DISABLE_HELP_MENU| DOCHOSTUIFLAG_SCROLL_NO;
+
+        //这里还可以加其他代码来控制网页
+        //LPWSTR m_pZoom = L"BODY{Zoom:100%;}";
+        //pInfo->pchHostCss = (LPWSTR)::CoTaskMemAlloc((lstrlenW(m_pZoom)+1)*2);
+        //lstrcpyW(pInfo->pchHostCss, m_pZoom);
+    }
+
+    return S_OK;
+
+// 	if (m_pWebBrowserEventHandler)
+// 	{
+// 		return m_pWebBrowserEventHandler->GetHostInfo(pInfo);
+// 	}
+// 	return E_NOTIMPL;
 }
 
 STDMETHODIMP CWebBrowserUI::ShowUI( DWORD dwID, IOleInPlaceActiveObject* pActiveObject, IOleCommandTarget* pCommandTarget, IOleInPlaceFrame* pFrame, IOleInPlaceUIWindow* pDoc )

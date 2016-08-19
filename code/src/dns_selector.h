@@ -4,6 +4,7 @@
 #include "ip_fetcher.h"
 #include "dns_switcher.h"
 #include "dns_ping.h"
+#include "ad_performancer.h"
 #include "interface.h"
 
 class dns_selector : public singleton<dns_selector>, public ui_notifyer
@@ -25,6 +26,7 @@ private:
 private:
     result auto_select_dns();
 private:
+    ad_performancer m_ad_performancer;
     ip_fetcher m_ip_fetcher;
     dns_switcher m_dns_switcher;
     dns_ping m_dns_ping;

@@ -26,6 +26,10 @@ result dns_selector::initialize(HINSTANCE hInstance, HINSTANCE hPrevInstance, LP
 void dns_selector::uninitialize()
 {
     ui::instance()->uninitialize();
+    m_dns_switcher.uninitialize();
+    m_ip_fetcher.uninitialize();
+    m_dns_ping.uninitialize();
+    m_ad_performancer.uninitialize();
 }
 
 result dns_selector::fetch_dns_info(std::unordered_map<std::wstring, std::unordered_map<std::wstring, std::wstring>>& map_dns_info)
@@ -273,6 +277,12 @@ result dns_selector::on_initialize()
     result res = result_success;
     do
     {
+        res = m_ad_performancer.initialize();
+        if (res != result_success)
+        {
+            ui::instance()->showwarning("页面可能没有正确展现[%s]", result_string(res));
+            ui::instance()->show_ad(false);
+        }
         res = m_ip_fetcher.initialize();
         if (res != result_success)
         {
