@@ -1,9 +1,7 @@
 #pragma once
 
 #define NETWORK_INTERFACE                           "http://tools.cloudxns.net/Api/getLdns"
-#define AD_IMG_URL                                  "https://www.cloudxns.net/Public/Sun/images/common/AdBanner.png"
-#define AD_LINK_URL                                 "https://www.cloudxns.net/Index/index.html?channel_code=dnsselector"
-#define DEFAULT_AD_LINK_URL                         "https://www.cloudxns.net"
+#define AD_LINK_URL                                 "http://tools.cloudxns.net/index/dnsselector"
 
 #define DNS_PING_URL                                L"www.qq.com"
 
@@ -78,4 +76,4 @@ __inline const char* result_string(result res)
 }
 
 
-#define AD_HTML_FMT "<!DOCTYPE html><html lang=\"en\"><head>	<meta charset=\"UTF-8\">	<title>test</title>	<style type=\"text/css\">	*{margin: 0;padding: 0}	html,body{		height: 100%%;		width: 100%%;		overflow: hidden;	}	img{		height: 100%%;		width: 100%%;	}	</style></head><body>	<a href=\"%s\" target=\"_blank\">		<img src=\"%s\">	</a></body></html>"
+//#define AD_HTML_FMT "<!DOCTYPE html><html lang=\"en\"><head>	<meta charset=\"UTF-8\">	<title>test</title>	<style type=\"text/css\">	*{margin: 0;padding: 0}	html,body{		height: 100%%;		width: 100%%;		overflow: hidden;	}	img{		height: 100%%;		width: 100%%;	}	</style></head><body>	<a href=\"%s\" target=\"_blank\">		<img src=\"%s\">	</a></body></html>"

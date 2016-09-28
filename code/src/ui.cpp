@@ -157,6 +157,24 @@ LRESULT ui::OnKeyDown(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
     return 0;
 }
 
+LRESULT ui::OnSize(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+    if (wParam == SIZE_MAXIMIZED)
+    {
+        bHandled = TRUE;
+        return 0;
+    }
+    else if (wParam == SIZE_MAXSHOW)
+    {
+        bHandled = TRUE;
+        return 0;
+    }
+    else
+    {
+        return WindowImplBase::OnSize(uMsg, wParam, lParam, bHandled);
+    }
+}
+
 void ui::OnClick(TNotifyUI& msg)
 {
     DuiLib::CControlUI* pSender = msg.pSender;
